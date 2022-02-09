@@ -16,4 +16,4 @@ Você pode visualizar o layout do projeto através desse link. É necessário te
 📝 Licença
 Esse projeto está sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
 
-Feito com ♥ by Rocketseat 👋 Participe da nossa comunidade!
+Feito com aulas da Rocketseat 👋
