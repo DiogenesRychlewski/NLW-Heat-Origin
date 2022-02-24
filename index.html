@@ -70,15 +70,23 @@
     </main>
 
     <script>
-        const github = "DiogenesRychlewski"
-        const youtube = "UCUbXtN8_lqCOi_hos-wnSGw"
-        const facebook = "diogenes.rychlewski"
-        const instagram = "dih_rychlewski"
-        const twitter = "dih_rychlewski"
 
-        function showSomething(){
-            alert ('oi estou aqui')
+        function showSomething(texto){
+            alert(texto);
         }
+
+        const links = {
+
+         github: "DiogenesRychlewski",
+         youtube: "UCUbXtN8_lqCOi_hos-wnSGw",
+         facebook: "diogenes.rychlewski",
+         instagram: "dih_rychlewski",
+         twitter: "dih_rychlewski"
+
+        }
+        
+
+        showSomething(links.github)
 
         showSomething();
         
