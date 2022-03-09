@@ -19,7 +19,7 @@
                 </span>
                 <img src="http://lorempixel.com.br/185/185" alt="Foto pessoal" />
             </div>
-            <h1>Diógenes Rychlewski</h1>
+            <h1 id="userName">Diógenes Rychlewski</h1>
             <a href="https://github.com/DiogenesRychlewski"
                target="_blank" 
             >
@@ -29,8 +29,8 @@
                 An instructor focused on helping pople start programming for web
             </p>
 
-            <ul>
-                <li>
+            <ul id="socialLinks">
+                <li class="youtube">
                     <a 
                     href="https://www.youtube.com/channel/UCUbXtN8_lqCOi_hos-wnSGw"
                     target="_blank"
@@ -39,7 +39,7 @@
                     </a>
                 </li>
 
-                <li>
+                <li class="facebook">
                     <a 
                     href="https://www.facebook.com/diogenes.rychlewski/"
                     target="_blank"
@@ -48,7 +48,7 @@
                     </a>
                 </li>
 
-                <li>
+                <li class="instagram">
                     <a 
                     href="https://www.instagram.com/dih_rychlewski/"
                     target="_blank"
@@ -57,7 +57,7 @@
                     </a>
                 </li>
 
-                <li>
+                <li class="twitter">
                     <a 
                     href="https://twitter.com/dih_rychlewski"
                     target="_blank"
@@ -71,11 +71,7 @@
 
     <script>
 
-        function showSomething(texto){
-            alert(texto);
-        }
-
-        const links = {
+        const LinksSocialMedia = {
 
          github: "DiogenesRychlewski",
          youtube: "UCUbXtN8_lqCOi_hos-wnSGw",
@@ -84,13 +80,20 @@
          twitter: "dih_rychlewski"
 
         }
-        
 
-        showSomething(links.github)
+        function changeSocialMediaLinks(){
 
-        showSomething();
+            for (let li of socialLinks.children){
+            const social = li.getAttribute("class")
+            li.children[0].href = `https://${social}.com/${LinksSocialMedia[social]}`
+
+            alert(li.children[0].href)
+            
+            }
+        }
         
+        changeSocialMediaLinks()
+
     </script>
-
-</body>
+  </body>
 </html>
