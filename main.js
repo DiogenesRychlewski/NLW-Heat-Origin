@@ -19,3 +19,21 @@ const LinksSocialMedia = {
    }
    
    changeSocialMediaLinks()
+
+   function getgitHubProfileInfos(){
+
+        const url = `https://api.github.com/users/${LinksSocialMedia.github}`
+
+        fetch(url)
+        .then(responde => responde.json())
+        .then(data => {
+            userName.textContent = data.name
+            userBio.textContent = data.bio
+            userLink.href = data.html_url  
+            userPhoto.src = data.avatar_url
+            userLogin.textContent = data.login
+        })
+
+   }
+
+   getgitHubProfileInfos()
